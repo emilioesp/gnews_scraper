@@ -9,11 +9,7 @@ argentina_periodicos = ['www.clarin.com', 'www.lanacion.com.ar', 'www.pagina12.c
              'www.cronica.com.ar', 'www.laprensa.com.ar', 'www.ole.com.ar',
              'www.ambito.com', 'www.cronista.com', 'www.baenegocios.com',
              'www.eleconomista.com.ar']
-<<<<<<< HEAD
 argentina_periodicos = argentina_periodicos + [x.replace('www.', '') for x in argentina_periodicos]
-=======
-argentina_periodicos = argentina_periodicos + [x.replace('www.','') for x in argentina_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 brasil_periodicos = ['oglobo.globo.com', 'extra.globo.com', 'www.meiahora.com',
           'www.odia.com.br', 'www.lancenet.com.br',
@@ -25,28 +21,16 @@ brasil_periodicos = ['oglobo.globo.com', 'extra.globo.com', 'www.meiahora.com',
           'www.correiodopovo.com.br', 'www.diariogaucho.com.br',
           'www.alo.com.br', 'www.atarde.com.br', 'www.gazetadopovo.com.br',
           'www.dezminutos.online', 'www.tribunaonline.com.br']
-<<<<<<< HEAD
 brasil_periodicos = brasil_periodicos + [x.replace('www.', '') for x in brasil_periodicos]
-=======
-brasil_periodicos = brasil_periodicos + [x.replace('www.','') for x in brasil_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 chile_periodicos = ['www.latercera.com', 'www.emol.com', 'www.lun.com', 'www.lacuarta.com',
          'www.lasegunda.com', 'www.publimetro.cl', 'www.lahora.cl',
          'www.hoyxhoy.cl', 'www.elgraficochile.cl', 'www.df.cl', 'www.pulso.cl']
-<<<<<<< HEAD
 chile_periodicos = chile_periodicos + [x.replace('www.', '') for x in chile_periodicos]
 
 ecuador_periodicos = ['www.lahora.com.ec', 'www.elcomercio.com', 'www.ultimasnoticias.ec',
            'www.metroecuador.com.ec', 'www.primicias.ec', 'www.cerolatitud.ec']
 ecuador_periodicos = ecuador_periodicos + [x.replace('www.', '') for x in ecuador_periodicos]
-=======
-chile_periodicos = chile_periodicos + [x.replace('www.','') for x in chile_periodicos]
-
-ecuador_periodicos = ['www.lahora.com.ec', 'www.elcomercio.com', 'www.ultimasnoticias.ec',
-           'www.metroecuador.com.ec', 'www.primicias.ec', 'www.cerolatitud.ec']
-ecuador_periodicos = ecuador_periodicos + [x.replace('www.','') for x in ecuador_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 peru_periodicos = ['www.larepublica.pe', 'www.elcomercio.pe', 'www.diariocorreo.pe',
         'www.peru21.pe', 'www.larazon.pe', 'www.laprimera.pe',
@@ -59,11 +43,7 @@ peru_periodicos = ['www.larepublica.pe', 'www.elcomercio.pe', 'www.diariocorreo.
         'www.elbocon.pe', 'www.todosport.pe', 'www.gestion.pe',
         'www.perushimpo.com', 'www.lapatria.pe', 'www.cronicaviva.com.pe',
         'www.peruinforma.com', 'www.dsn.pe', 'www.andina.pe', 'www.laprensa.pe']
-<<<<<<< HEAD
 peru_periodicos = peru_periodicos + [x.replace('www.', '') for x in peru_periodicos]
-=======
-peru_periodicos = peru_periodicos + [x.replace('www.','') for x in peru_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 guatemala_periodicos = ['www.prensalibre.com', 'www.lahora.gt', 'www.elperiodico.com.gt',
              'www.dca.gob.gt', 'www.nuestrodiario.com', 'www.aldia.com.gt',
@@ -71,22 +51,14 @@ guatemala_periodicos = ['www.prensalibre.com', 'www.lahora.gt', 'www.elperiodico
              'www.republica.gt', 'www.guatemala.com', 'www.newsinamerica.com',
              'www.ojoconmipisto.com', 'www.perspectiva.gt',
              'www.elmetropolitano.com.gt']
-<<<<<<< HEAD
 guatemala_periodicos = guatemala_periodicos + [x.replace('www.', '') for x in guatemala_periodicos]
-=======
-guatemala_periodicos = guatemala_periodicos + [x.replace('www.','') for x in guatemala_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 el_salvador_periodicos = ['www.elsalvador.com', 'www.laprensagrafica.com', 'www.elmundo.sv',
                'www.diariocolatino.com', 'www.elgrafico.com', 'www.lapagina.com.sv',
                'www.elsalvadortimes.com', 'www.elfaro.net', 'www.contrapunto.com.sv',
                'www.solonoticias.com', 'www.ultimahora.sv', 'www.verdaddigital.com',
                'www.diariolahuella.com', 'www.elindependiente.sv', 'www.elurbano.news']
-<<<<<<< HEAD
 el_salvador_periodicos = el_salvador_periodicos + [x.replace('www.', '') for x in el_salvador_periodicos]
-=======
-el_salvador_periodicos = el_salvador_periodicos + [x.replace('www.','') for x in el_salvador_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 honduras_periodicos = ['www.latribuna.hn', 'www.elheraldo.hn', 'www.diez.hn',
             'www.diariomas.hn', 'www.proceso.hn', 'www.hondudiario.com',
@@ -94,20 +66,12 @@ honduras_periodicos = ['www.latribuna.hn', 'www.elheraldo.hn', 'www.diez.hn',
             'www.enaltavoz.com', 'www.elsoldehonduras.com',
             'www.libertaddigital.news', 'www.criterio.hn', 'www.elmundo.hn',
             'www.paradigma.hn', 'www.quienopina.com', 'www.dinero.hn']
-<<<<<<< HEAD
 honduras_periodicos = honduras_periodicos + [x.replace('www.', '') for x in honduras_periodicos]
-=======
-honduras_periodicos = honduras_periodicos + [x.replace('www.','') for x in honduras_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 colombia_periodicos = ['www.eltiempo.com', 'www.publimetro.co', 'www.elespectador.com',
             'www.elnuevosiglo.com.co', 'www.qhubo.com', 'www.diarioadn.co',
             'www.larepublica.co', 'www.portafolio.co']
-<<<<<<< HEAD
 colombia_periodicos = colombia_periodicos + [x.replace('www.', '') for x in colombia_periodicos]
-=======
-colombia_periodicos = colombia_periodicos + [x.replace('www.','') for x in colombia_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 mexico_periodicos = ['www.milenio.com', 'www.excelsior.com.mx', 'www.eluniversal.com.mx',
           'www.heraldodemexico.com.mx', 'www.reforma.com',
@@ -121,11 +85,7 @@ mexico_periodicos = ['www.milenio.com', 'www.excelsior.com.mx', 'www.eluniversal
           'www.maspormas.com.mx', 'www.24-horas.mx', 'www.record.com.mx',
           'www.esto.com.mx', 'www.ovaciones.com', 'www.estadiodeportes.mx',
           'www.cancha.com', 'www.elfinanciero.com.mx', 'www.eleconomista.com.mx']
-<<<<<<< HEAD
 mexico_periodicos = mexico_periodicos + [x.replace('www.', '') for x in mexico_periodicos]
-=======
-mexico_periodicos = mexico_periodicos + [x.replace('www.','') for x in mexico_periodicos]
->>>>>>> edc23f1d963ac0d3fe75a24dc9971a9c742eee21
 
 
 countries_info = {
