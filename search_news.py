@@ -1,6 +1,6 @@
 from tqdm import tqdm
 import pandas as pd
-import get_news
+import clean_news
 #from .get_news import *
 from datetime import date, timedelta, datetime
 from dateutil.relativedelta import relativedelta
@@ -77,5 +77,5 @@ for n in news:
     df = pd.read_csv('news/'+n, sep='\t')
     df = df.dropna()
     df = df.drop_duplicates()
-    df1 = get_news.get_topics(df, topics)
+    df1 = clean_news.get_topics(df, topics)
     df1.to_csv('./news_cln/'+n[:-4]+'_cln.csv', sep='\t', index=False)

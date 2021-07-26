@@ -42,27 +42,3 @@ def get_news_paper(country, query, periodico, start_day, end_day):
     df = df.drop_duplicates(subset=['link'])
     df = df.sort_values('date')
     return df
-
-
-def get_topics(df, words):
-    """
-    Dado un dataframe df y una lista de plabras a seleccionar 'words'
-    Busca estas palabras en el titular de la noticia
-    y en el link de la misma y si aparece alguna,
-    entonces se conserva la noticia.
-    """
-    pattern = '|'.join(words)
-    df1 = df.loc[df.title_corrected.str.contains(pattern)]
-    return df1
-
-
-def clean_topics(df, nowords):
-    """
-    Dado un dataframe df y una lista de plabras a seleccionar 'words'
-    Busca estas palabras en el titular de la noticia
-    y en el link de la misma y si aparece alguna,
-    entonces se conserva la noticia.
-    """
-    pattern = '|'.join(nowords)
-    df1 = df.loc[~df.title_corrected.str.contains(pattern)]
-    return df1
