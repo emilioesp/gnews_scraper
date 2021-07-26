@@ -78,5 +78,4 @@ for n in news:
     df = df.dropna()
     df = df.drop_duplicates()
     df1 = get_news.get_topics(df, topics)
-    # df1['polaridad'] = polaridad(df1)
     df1.to_csv('./news_cln/'+n[:-4]+'_cln.csv', sep='\t', index=False)
