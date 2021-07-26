@@ -49,7 +49,7 @@ queries = ['migracion', 'migrante', 'refugiad']
 queries_br = ['migraçao', 'migrante', 'refugiad']
 
 #paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br']
-paises = ['pe']
+paises = ['gt','sv','hn','co','mx']
 
 for pais in paises:
     if pais == 'br':
@@ -57,7 +57,7 @@ for pais in paises:
     else:
         q = queries
     print(pais)
-    months = create_weeks_between_dates(begin='2019-01-01', end='2021-07-15')
+    months = create_months_between_dates(begin='2019-01-01', end='2021-07-15')
     df = pd.DataFrame()
     for j in tqdm(range(len(months)-1)):
         df1 = get_news.get_news(pais, q, months[j], months[j+1])
@@ -70,7 +70,7 @@ news = os.listdir('news')
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugiada', 'refugiadas', 'migran', 'migración', 'migratoria',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
-          'despalzad']
+          'desplazad']
 
 for n in news:
     print(n)

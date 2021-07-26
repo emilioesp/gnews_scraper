@@ -44,7 +44,6 @@ def get_news_paper(country, query, periodico, start_day, end_day):
     return df
 
 
-
 def get_topics(df, words):
     """
     Dado un dataframe df y una lista de plabras a seleccionar 'words'
@@ -57,10 +56,13 @@ def get_topics(df, words):
     return df1
 
 
-"""
-EJEMPLO
-
-df = get_news('mx', ['movimiento ciudadano', 'MC'], '2020-06-01', '2020-12-22')
-
-df.to_csv('mc.csv', sep='\t')
-"""
+def clean_topics(df, nowords):
+    """
+    Dado un dataframe df y una lista de plabras a seleccionar 'words'
+    Busca estas palabras en el titular de la noticia
+    y en el link de la misma y si aparece alguna,
+    entonces se conserva la noticia.
+    """
+    pattern = '|'.join(nowords)
+    df1 = df.loc[~df.title_corrected.str.contains(pattern)]
+    return df1
