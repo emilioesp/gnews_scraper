@@ -78,7 +78,10 @@ news = os.listdir('news')
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugiada', 'refugiadas', 'migran', 'migración', 'migratoria',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
-          'desplazad']
+          'desplazad',
+          'migration', 'migrant', 'refugee',
+          'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenlands'
+          ]
 
 for n in news:
     print(n)
