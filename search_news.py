@@ -48,12 +48,20 @@ queries = ['migracion', 'migrante', 'refugiad']
 
 queries_br = ['migraçao', 'migrante', 'refugiad']
 
-paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr']
+queries_en = ['migration', 'migrant', 'refugee']
+
+queries_nl = ['migratie', 'migrant', 'vluchteling']
+
+paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
 #paises = ['gt','sv','hn','co','mx']
 
 for pais in paises:
     if pais == 'br':
         q = queries_br
+    elif pais in ['bz', 'bb', 'tt', 'jm']:
+        q = queries_en
+    elif pais == 'sr':
+        q = queries_nl
     else:
         q = queries
     print(pais)

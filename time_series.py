@@ -40,7 +40,7 @@ paises_codes = {'ar':'ARGENTINA',
                 'sv':'EL SALVADOR',
                 'hn':'HONDURAS',
                 'br':'BRASIL'}
-paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br']
+paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
 serie_vol = go.Figure()
 for pais in paises:
     serie_vol = go.Figure()

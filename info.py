@@ -94,7 +94,15 @@ uruguay_periodicos = ['www.elpais.com.uy','www.elobservador.com.uy', 'www.republ
 puerto_rico_periodicos = ['www.elnuevodia.com', 'www.primerahora.com', 'www.elvocero.com', 'www.metro.pr', 'www.noticel.com' ,
                           'www.periodicolaperla.com', 'www.elexpresso.com']
 
+belice_periodicos = ['www.sanpedrosun.com', 'www.breakingbelizenews.com']
 
+barbados_periodicos = ['www.barbadosadvocate.com']
+
+trinidad_y_tobago_periodicos = ['www.trinidadexpress.com', 'www.newsday.co.tt', 'www.guardian.co.tt']
+
+jamaica_periodicos = ['www.jamaica-gleaner.com', 'www.jamaica-star.com', 'www.jamaicaobserver.com']
+
+suriname_periodicos = ['www.dwtonline.com', 'www.dagbladdewest.com']
 
 countries_info = {
                   'AR': {'name':'argentina', 'gl_language_id': 'es-419', 'newspapers': argentina_periodicos},
@@ -107,6 +115,11 @@ countries_info = {
                   'GT': {'name':'guatemala', 'gl_language_id': 'es-419', 'newspapers': guatemala_periodicos},
                   'MX': {'name':'mexico', 'gl_language_id': 'es-419', 'newspapers': mexico_periodicos},
                   'PE': {'name':'peru', 'gl_language_id': 'es-419', 'newspapers': peru_periodicos},
-                  'UY': {'name:''uruguay', 'gl_language_id': 'es-419', 'newspapers': uruguay_periodicos},
-                  'PR': {'name:''puertorico', 'gl_language_id': 'es-419', 'newspapers': puerto_rico_periodicos},
+                  'UY': {'name':'uruguay', 'gl_language_id': 'es-419', 'newspapers': uruguay_periodicos},
+                  'PR': {'name':'puertorico', 'gl_language_id': 'es-419', 'newspapers': puerto_rico_periodicos},
+                  'BZ': {'name':'belice', 'gl_language_id': 'en', 'newspapers': belice_periodicos},
+                  'BB': {'name':'barbados', 'gl_language_id': 'en', 'newspapers': barbados_periodicos},
+                  'TT': {'name':'trinidadytobago', 'gl_language_id': 'en', 'newspapers': trinidad_y_tobago_periodicos},
+                  'JM': {'name':'jamaica', 'gl_language_id': 'en', 'newspapers': jamaica_periodicos},
+                  'SR': {'name':'suriname', 'gl_language_id': 'nl', 'newspapers': suriname_periodicos},
                   }
