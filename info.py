@@ -11,12 +11,11 @@ argentina_periodicos = ['www.clarin.com', 'www.lanacion.com.ar', 'www.pagina12.c
              'www.eleconomista.com.ar']
 argentina_periodicos = argentina_periodicos + [x.replace('www.', '') for x in argentina_periodicos]
 
-brasil_periodicos = ['oglobo.globo.com', 'extra.globo.com', 'www.meiahora.com',
-          'www.odia.com.br', 'www.lancenet.com.br',
-          'www.correiodobrasil.com.br', 'www.jornalpovo.com.br',
+brasil_periodicos = ['oglobo.globo.com', 'extra.globo.com',
+          'www.lancenet.com.br', 'www.correiodobrasil.com.br', 'www.jornalpovo.com.br',
           'www.jb.com.br', 'www.folha.uol.com.br', 'www.estadao.com.br',
           'www.agora.com.br', 'www.gazetasp.com.br', 'www.metrojornal.com.br',
-          'www.valor.com.br', 'www.r7.com', 'www.supernoticia.com.br',
+          'www.valor.com.br', 'www.supernoticia.com.br',
           'www.em.com.br', 'www.otempo.com.br', 'www.zerohora.com.br',
           'www.correiodopovo.com.br', 'www.diariogaucho.com.br',
           'www.alo.com.br', 'www.atarde.com.br', 'www.gazetadopovo.com.br',
@@ -35,12 +34,11 @@ ecuador_periodicos = ecuador_periodicos + [x.replace('www.', '') for x in ecuado
 peru_periodicos = ['www.larepublica.pe', 'www.elcomercio.pe', 'www.diariocorreo.pe',
         'www.peru21.pe', 'www.larazon.pe', 'www.laprimera.pe',
         'www.expreso.com.pe', 'www.elperuano.pe', 'www.delpais.com.pe',
-        'www.elperfil.pe', 'www.exitosanoticias.pe', 'www.trome.pe',
+        'www.elperfil.pe', 'www.exitosanoticias.pe',
         'www.ojo.pe', 'www.elpopular.pe', 'www.extra.com.pe',
         'www.elchino.pe', 'www.elmen.pe', 'www.radiokaribena.pe',
         'www.diarionuevosol.com', 'www.diariouno.pe', 'www.lanacionperu.com',
-        'www.publimetro.pe', 'www.libero.pe', 'www.depor.com',
-        'www.elbocon.pe', 'www.todosport.pe', 'www.gestion.pe',
+        'www.publimetro.pe', 'www.elbocon.pe', 'www.gestion.pe',
         'www.perushimpo.com', 'www.lapatria.pe', 'www.cronicaviva.com.pe',
         'www.peruinforma.com', 'www.dsn.pe', 'www.andina.pe', 'www.laprensa.pe']
 peru_periodicos = peru_periodicos + [x.replace('www.', '') for x in peru_periodicos]
@@ -82,9 +80,8 @@ mexico_periodicos = ['www.milenio.com', 'www.excelsior.com.mx', 'www.eluniversal
           'www.contrareplica.mx', 'www.diariobasta.com', 'www.elpuntocritico.com',
           'www.periodicoeldia.mx', 'www.reporteindigo.com', 'www.elnovedades.com',
           'www.miled.com', 'www.pasala.com.mx', 'www.thenews.mx',
-          'www.maspormas.com.mx', 'www.24-horas.mx', 'www.record.com.mx',
-          'www.esto.com.mx', 'www.ovaciones.com', 'www.estadiodeportes.mx',
-          'www.cancha.com', 'www.elfinanciero.com.mx', 'www.eleconomista.com.mx']
+          'www.maspormas.com.mx', 'www.24-horas.mx', 'www.ovaciones.com',
+          'www.elfinanciero.com.mx', 'www.eleconomista.com.mx']
 mexico_periodicos = mexico_periodicos + [x.replace('www.', '') for x in mexico_periodicos]
 
 
