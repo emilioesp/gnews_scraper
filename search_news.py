@@ -48,8 +48,8 @@ queries = ['migracion', 'migrante', 'refugiad']
 
 queries_br = ['migraçao', 'migrante', 'refugiad']
 
-#paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br']
-paises = ['gt','sv','hn','co','mx']
+paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr']
+#paises = ['gt','sv','hn','co','mx']
 
 for pais in paises:
     if pais == 'br':
