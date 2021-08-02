@@ -104,6 +104,36 @@ jamaica_periodicos = ['www.jamaica-gleaner.com', 'www.jamaica-star.com', 'www.ja
 
 suriname_periodicos = ['www.dwtonline.com', 'www.dagbladdewest.com']
 
+venezuela_periodicos = ['www.ultimasnoticias.com.ve', 'www.eluniversal.com', 'www.2001.com.ve',
+                'www.correodelorinoco.gob.ve', 'www.telesurtv.net', 'ultimasnoticias.com.ve',
+                'www.elimpulso.com', 'www.elnacional.com', 'www.el-carabobeno.com', 'www.lapatilla.com',
+                'www.elpitazo.net', 'www.noticierodigital.com', 'elestimulo.com']
+
+bolivia_periodicos = ['www.eldiario.net', 'www.la-razon.com', 'jornada.com.bo', 'www.paginasiete.bo',
+            'www.erbol.com.bo', 'www.noticiasfides.com', 'www.boliviaentusmanos.com', 'www.laprensa.com.bo',
+            'www.oxigeno.bo', 'www.brujuladigital.net', 'eldeber.com.bo', 'www.lostiempos.com']
+
+dominicana_periodicos = ['listindiario.com', 'elnacional.com.do', 'hoy.com.do', 'www.diariolibre.com',
+                'www.elcaribe.com.do', 'eldia.com.do', 'elnuevodiario.com.do', 'www.metrord.do',
+                'www.ultimasnoticias.com.do', 'www.acento.com.do', 'almomento.net', 'diariodominicano.com']
+
+paraguay_periodicos = ['www.ultimahora.com', 'www.abc.com.py', 'www.cronica.com.py', 'independiente.com.py',
+            'www.hoy.com.py', 'www.5dias.com.py', 'www.paraguay.com', 'www.elpoder.com.py', 'www.elredactor.com.py',
+            'www.lanacion.com.py', 'diariolajornada.com.py']
+
+nicaragua_periodicos = ['www.laprensa.com.ni', 'www.elnuevodiario.com.ni', '100noticias.com.ni',
+                'www.vostv.com.ni', 'www.confidencial.com.ni', 'www.articulo66.com', 'nicaraguainvestiga.com',
+                'nicaraguaactual.tv', 'ipnicaragua.com']
+
+costarica_periodicos = ['www.nacion.com', 'www.diarioextra.com', 'www.larepublica.net', 'www.lateja.cr',
+                'www.elmundo.cr', 'www.elpais.cr', 'www.crhoy.com', 'elguardian.cr', 'amprensa.com',
+                'ncrnoticias.com', 'elperiodicocr.com', 'delfino.cr']
+
+panama_periodicos = ['www.panamaamerica.com.pa', 'www.critica.com.pa', 'www.prensa.com', 'elsiglo.com.pa',
+            'www.laestrella.com.pa', 'www.midiario.com', 'www.diaadia.com.pa', 'www.metrolibre.com',
+            'www.panama24horas.com.pa', 'anpanama.com', 'ensegundos.com.pa', 'eldigitalpanama.com',
+            'lagacetadepanama.com']
+
 countries_info = {
                   'AR': {'name':'argentina', 'gl_language_id': 'es-419', 'newspapers': argentina_periodicos},
                   'BR': {'name':'brasil', 'gl_language_id': 'pt-BR', 'newspapers': brasil_periodicos},
@@ -122,4 +152,11 @@ countries_info = {
                   'TT': {'name':'trinidadytobago', 'gl_language_id': 'en', 'newspapers': trinidad_y_tobago_periodicos},
                   'JM': {'name':'jamaica', 'gl_language_id': 'en', 'newspapers': jamaica_periodicos},
                   'SR': {'name':'suriname', 'gl_language_id': 'nl', 'newspapers': suriname_periodicos},
+                  'VE': {'name':'venezuela', 'gl_language_id': 'es-419', 'newspapers': venezuela_periodicos},
+                  'BO': {'name':'bolivia', 'gl_language_id': 'es-419', 'newspapers': bolivia_periodicos},
+                  'DO': {'name':'dominicana', 'gl_language_id': 'es-419', 'newspapers': dominicana_periodicos},
+                  'PY': {'name':'paraguay', 'gl_language_id': 'es-419', 'newspapers': paraguay_periodicos},
+                  'NI': {'name':'nicaragua', 'gl_language_id': 'es-419', 'newspapers': nicaragua_periodicos},
+                  'CR': {'name':'costarica', 'gl_language_id': 'es-419', 'newspapers': costarica_periodicos},
+                  'PA': {'name':'panama', 'gl_language_id': 'es-419', 'newspapers': panama_periodicos},
                   }
