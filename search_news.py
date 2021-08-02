@@ -1,7 +1,7 @@
 from tqdm import tqdm
 import pandas as pd
 import clean_news
-#from .get_news import *
+from get_news import *
 from datetime import date, timedelta, datetime
 from dateutil.relativedelta import relativedelta
 import os
@@ -77,7 +77,7 @@ for pais in paises:
     months = create_months_between_dates(begin='2019-01-01', end='2021-07-15')
     df = pd.DataFrame()
     for j in tqdm(range(len(months)-1)):
-        df1 = get_news.get_news(pais, q, months[j], months[j+1])
+        df1 = get_news(pais, q, months[j], months[j+1])
         df = pd.concat([df, df1], ignore_index=True)
         df.to_csv('./news/news_'+pais+'.csv', sep='\t', index=False)
 

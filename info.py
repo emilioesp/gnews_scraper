@@ -57,7 +57,7 @@ el_salvador_periodicos = ['www.elsalvador.com', 'www.laprensagrafica.com', 'www.
                'www.elsalvadortimes.com', 'www.elfaro.net', 'www.contrapunto.com.sv',
                'www.solonoticias.com', 'www.ultimahora.sv', 'www.verdaddigital.com',
                'www.diariolahuella.com', 'www.elindependiente.sv', 'www.elurbano.news']
-el_salvador_periodicos += + [x.replace('www.', '') for x in el_salvador_periodicos]
+el_salvador_periodicos += [x.replace('www.', '') for x in el_salvador_periodicos]
 
 honduras_periodicos = ['www.latribuna.hn', 'www.elheraldo.hn', 'www.diez.hn',
             'www.diariomas.hn', 'www.proceso.hn', 'www.hondudiario.com',
@@ -139,7 +139,7 @@ jamaica_periodicos += [x.replace('www.', '') for x in jamaica_periodicos]
 suriname_periodicos = ['www.dwtonline.com', 'www.dagbladdewest.com'] # Holandes
 suriname_periodicos += [x.replace('www.', '') for x in suriname_periodicos]
 
-guayana_francesa = ['www.franceguyane.fr', 'franceguyane.fr'] # frances
+guayana_francesa_periodicos = ['www.franceguyane.fr', 'franceguyane.fr'] # frances
 
 
 countries_info = {
@@ -165,5 +165,5 @@ countries_info = {
                   'TT': {'name':'trinidadytobago', 'gl_language_id': 'en', 'newspapers': trinidad_y_tobago_periodicos},
                   'JM': {'name':'jamaica', 'gl_language_id': 'en', 'newspapers': jamaica_periodicos},
                   'SR': {'name':'suriname', 'gl_language_id': 'nl', 'newspapers': suriname_periodicos},
-                  'GF': {'name':'guayanafrancesa', 'gl_language_id': 'fr', 'newspapers': guayana_fracnesa_periodicos},
+                  'GF': {'name':'guayanafrancesa', 'gl_language_id': 'fr', 'newspapers': guayana_francesa_periodicos},
                   }
