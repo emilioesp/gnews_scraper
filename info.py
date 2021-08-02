@@ -6,7 +6,7 @@ languages codes source: https://docs.appmanager.io/docs/list-of-supported-langua
 #Periodicos
 argentina_periodicos = ['www.clarin.com', 'www.lanacion.com.ar', 'www.pagina12.com.ar',
              'www.tiempoar.com.ar', 'www.diariopopular.com.ar',
-             'www.cronica.com.ar', 'www.laprensa.com.ar', 'www.ole.com.ar',
+             'www.cronica.com.ar', 'www.laprensa.com.ar', #'www.ole.com.ar',
              'www.ambito.com', 'www.cronista.com', 'www.baenegocios.com',
              'www.eleconomista.com.ar']
 argentina_periodicos = argentina_periodicos + [x.replace('www.', '') for x in argentina_periodicos]

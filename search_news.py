@@ -1,7 +1,7 @@
 from tqdm import tqdm
 import pandas as pd
 import clean_news
-#from .get_news import *
+from get_news import *
 from datetime import date, timedelta, datetime
 from dateutil.relativedelta import relativedelta
 import os
@@ -52,8 +52,8 @@ queries_en = ['migration', 'migrant', 'refugee']
 
 queries_nl = ['migratie', 'migrant', 'vluchteling']
 
-paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
-#paises = ['gt','sv','hn','co','mx']
+#paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
+paises = ['ar','br','ec','co','cl','uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
 
 for pais in paises:
     if pais == 'br':
@@ -68,7 +68,7 @@ for pais in paises:
     months = create_months_between_dates(begin='2019-01-01', end='2021-07-15')
     df = pd.DataFrame()
     for j in tqdm(range(len(months)-1)):
-        df1 = get_news.get_news(pais, q, months[j], months[j+1])
+        df1 = get_news(pais, q, months[j], months[j+1])
         df = pd.concat([df, df1], ignore_index=True)
         df.to_csv('./news/news_'+pais+'.csv', sep='\t', index=False)
 
@@ -80,7 +80,7 @@ topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
           'desplazad',
           'migration', 'migrant', 'refugee',
-          'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenlands'
+          'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenland'
           ]
 
 for n in news:
