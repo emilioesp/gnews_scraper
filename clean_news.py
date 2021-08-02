@@ -42,7 +42,7 @@ def clean_news(df, words, nowords):
     df2 = clean_topics(df1, nowords)
     return df2
 
-# Topics for get_topics 
+# Topics for get_topics
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugiada', 'refugiadas', 'migran', 'migración', 'migratoria',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
@@ -50,3 +50,11 @@ topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
 
 # Lista de paíse a quitar con clean_topics
 nowords = ['libia', 'libano', 'grecia', 'croacia', 'europa']
+other_topic = ['euro', 'austria', 'aleman', 'francia', 'hungria', 'hungar', 'cadiz', 'suecia', 'bulgaria', 'italia',
+                'mediterrane', 'españa', 'camboya', 'grieg', 'grecia', 'turquia', 'liberia', 'ghana', #'paris',
+                'madrid', 'libia', 'etiopia', 'bangladesh', 'ceuta', 'marroqui', 'bitcoin', 'finlandia', 'belgica',
+                'malasia', 'lituania', 'tunez', 'pakistan', 'afgan', 'ocean king', 'tokio', 'tokyo', 'olimpi',
+                'bruselas', 'israel', 'marruecos', 'irak', 'britanic', 'reino unido', 'gran bretaña', 'subsharian',
+                'yihad', 'nauru', 'vietnam', 'australia', 'kim jong un', 'pelicula', 'lesbos', 'inversion',
+                'china','whatsapp', 'davies', 'bayern', 'catar', 'rohingya', 'dinamarca'] #se puede incluir siria y derivados, excepto para argentina
+nowords = nowords + other_topic
