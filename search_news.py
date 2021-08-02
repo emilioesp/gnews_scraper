@@ -52,8 +52,20 @@ queries_en = ['migration', 'migrant', 'refugee']
 
 queries_nl = ['migratie', 'migrant', 'vluchteling']
 
+<<<<<<< HEAD
 #paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
 paises = ['ar','br','ec','co','cl','uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
+=======
+queires_fr = ['migration', 'migrant','réfugié']
+
+# paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br', 
+#           'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr', 'bo', 'cr', 'do',
+#           'ni', 'uy', 'py', 'gf']
+
+paises = ['uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr', 'bo', 'cr', 'do',
+          'ni', 'uy', 'py', 'gf']
+
+>>>>>>> 08e1853c0b771aba95197ec35307b6a1f1da5ce6
 
 for pais in paises:
     if pais == 'br':
@@ -62,6 +74,8 @@ for pais in paises:
         q = queries_en
     elif pais == 'sr':
         q = queries_nl
+    elif pais == 'fr':
+        q = queries_fr
     else:
         q = queries
     print(pais)
