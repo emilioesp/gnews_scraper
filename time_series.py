@@ -59,7 +59,8 @@ paises_codes = {'ar':'ARGENTINA',
                 'py' : 'PARAGUAY',
                 'pa' : 'PANAMA',
                 'bo': 'BOLIVIA',
-                'cr' : 'COSTA RICA'
+                'cr' : 'COSTA RICA',
+                've' : 'VENEZUELA'
                }
 paises_codes_correct = {'ar':'ARGENTINA',
                 'co':'COLOMBIA',
@@ -84,12 +85,11 @@ paises_codes_correct = {'ar':'ARGENTINA',
                 'py' : 'PARAGUAY',
                 'pa' : 'PANAMÁ',
                 'bo': 'BOLIVIA',
-                'cr' : 'COSTA RICA'
+                'cr' : 'COSTA RICA',
+                've' : 'VENEZUELA'
                }
-#paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br' 'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr']
-paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br',
-          'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr', 'bo', 'cr', 'do',
-          'ni', 'uy', 'py', 'gf']
+
+paises = ['ar', 'bb', 'bo', 'br', 'bz', 'cl', 'co', 'cr', 'do', 'ec', 'gf', 'gt', 'hn', 'jm', 'mx', 'ni', 'pa', 'pe', 'pr', 'py', 'sr', 'sv', 'tt', 'uy', 've']
 #serie_vol = go.Figure()
 for pais in paises:
     serie_vol = go.Figure()
