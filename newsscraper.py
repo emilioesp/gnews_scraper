@@ -44,7 +44,7 @@ def create_query_news(query, country_code, language='es-419', get_text=False, nu
     engine_countries = ['ar', 'br', 'cl', 'co', 'mx', 'pe', 've']
     if query == '':
         news_url = "https://news.google.com/rss?&hl={}&gl={}&ceid={}:{}".format(language, country_code, country_code, language)
-    elif country_code is in engine_countries:
+    elif country_code in engine_countries:
         news_url = 'https://news.google.com/rss/search?q=' + search(query) + '&hl={}&gl={}&ceid={}:{}'.format(language, country_code, country_code, language)
     else:
         news_url = 'https://news.google.com/rss/search?q=' + search(query) + '&hl={}&gl=US&ceid=US:{}'.format(language, language)
