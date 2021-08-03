@@ -41,10 +41,13 @@ def get_article_web(web, langauge='es', retries=10):
 # ----------------------------------- https://news.google.com/search?q=fibras%20quimicas&hl=es-419&gl=MX&ceid=MX%3Aes-419
 
 def create_query_news(query, country_code, language='es-419', get_text=False, num=10):
+    engine_countries = ['ar', 'br', 'cl', 'co', 'mx', 'pe', 've']
     if query == '':
         news_url = "https://news.google.com/rss?&hl={}&gl={}&ceid={}:{}".format(language, country_code, country_code, language)
-    else:
+    elif country_code in engine_countries:
         news_url = 'https://news.google.com/rss/search?q=' + search(query) + '&hl={}&gl={}&ceid={}:{}'.format(language, country_code, country_code, language)
+    else:
+        news_url = 'https://news.google.com/rss/search?q=' + search(query) + '&hl={}&gl=US&ceid=US:{}'.format(language, language)
     #news_url = urllib.parse.quote_plus(news_url)
     try:
         response = requests.get(news_url,  timeout=10)
