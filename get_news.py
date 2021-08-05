@@ -20,6 +20,7 @@ def get_news(country, query, start_day, end_day):
         df['date'] = df['date'].apply(newsscraper.create_date_corrected)
         df['title_corrected'] = df['title'].apply(newsscraper.extract_good_title)
         df = df.drop_duplicates(subset=['link'])
+        df = df.drop_duplicates(subset=['title_corrected'])
         df = df.sort_values('date')
     except:
         pass
@@ -40,5 +41,6 @@ def get_news_paper(country, query, periodico, start_day, end_day):
     df['date'] = df['date'].apply(newsscraper.create_date_corrected)
     df['title_corrected'] = df['title'].apply(newsscraper.extract_good_title)
     df = df.drop_duplicates(subset=['link'])
+    df = df.drop_duplicates(subset=['title_corrected'])
     df = df.sort_values('date')
     return df
