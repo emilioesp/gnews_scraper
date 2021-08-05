@@ -1,12 +1,12 @@
 from sumy.parsers.html import HtmlParser
-from sumy.parsers.plaintext import PlaintextParser.
+from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer as Summarizer
 from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 import trafilatura
 
-def summarize_news(url, lenguaje='es', SENTENCES_COUNT=10):
+def summarize_news(url, lenguaje='es', SENTENCES_COUNT=3):
     tokenizer = Tokenizer(lenguaje)
     stemmer = Stemmer(lenguaje)
     summarizer = Summarizer(stemmer)

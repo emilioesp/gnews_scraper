@@ -46,7 +46,10 @@ def clean_news(df, words, nowords):
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugiada', 'refugiadas', 'migran', 'migración', 'migratoria',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
-          'desplazad']
+          'desplazad',
+          'migration', 'migrant', 'refugee',
+          'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenland'
+          ]]
 
 # Lista de paíse a quitar con clean_topics
 nowords = ['libia', 'libano', 'grecia', 'croacia', 'europa']
