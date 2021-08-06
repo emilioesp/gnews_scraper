@@ -49,7 +49,7 @@ topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'desplazad',
           'migration', 'migrant', 'refugee',
           'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenland'
-          ]]
+          ]
 
 # Lista de paíse a quitar con clean_topics
 nowords = ['libia', 'libano', 'grecia', 'croacia', 'europa']
@@ -61,4 +61,3 @@ other_topic = ['euro', 'austria', 'aleman', 'francia', 'hungria', 'hungar', 'cad
                'yihad', 'nauru', 'vietnam', 'australia', 'kim jong un', 'pelicula', 'lesbos', 'inversion',
                'china','whatsapp', 'davies', 'bayern', 'catar', 'rohingya', 'dinamarca'] #se puede incluir siria y derivados, excepto para argentina
 nowords = nowords + other_topic
-
