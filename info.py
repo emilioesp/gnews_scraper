@@ -25,11 +25,16 @@ brasil_periodicos += [x.replace('www.', '') for x in brasil_periodicos]
 
 chile_periodicos = ['www.latercera.com', 'www.emol.com', 'www.lun.com', 'www.lacuarta.com',
          'www.lasegunda.com', 'www.publimetro.cl', 'www.lahora.cl',
-         'www.hoyxhoy.cl', 'www.elgraficochile.cl', 'www.df.cl', 'www.pulso.cl']
+         'www.hoyxhoy.cl', 'www.elgraficochile.cl', 'www.df.cl', 'www.pulso.cl',
+         'www.elmostrador.cl', 'www.adnradio.cl', 'www.t13.cl', 'www.biobiochile.cl',
+         'www.24horas.cl', 'www.cooperativa.cl', 'www.eldinamo.cl',
+         'www.duplos.cl', 'www.radiosago.cl']
 chile_periodicos += [x.replace('www.', '') for x in chile_periodicos]
 
 ecuador_periodicos = ['www.lahora.com.ec', 'www.elcomercio.com', 'www.ultimasnoticias.ec',
-           'www.metroecuador.com.ec', 'www.primicias.ec', 'www.cerolatitud.ec']
+           'www.metroecuador.com.ec', 'www.primicias.ec', 'www.cerolatitud.ec',
+           'www.ecuavisa.com', 'www.expreso.ec', 'www.vistazo.com', 'www.eltelegrafo.com.ec',
+           'www.eluniverso.com', 'www.primicias.ec']
 ecuador_periodicos += [x.replace('www.', '') for x in ecuador_periodicos]
 
 peru_periodicos = ['www.larepublica.pe', 'www.elcomercio.pe', 'www.diariocorreo.pe',
@@ -69,7 +74,8 @@ honduras_periodicos += [x.replace('www.', '') for x in honduras_periodicos]
 
 colombia_periodicos = ['www.eltiempo.com', 'www.publimetro.co', 'www.elespectador.com',
             'www.elnuevosiglo.com.co', 'www.qhubo.com', 'www.diarioadn.co',
-            'www.larepublica.co', 'www.portafolio.co']
+            'www.larepublica.co', 'www.portafolio.co', 'www.lafm.com.co',
+            'www.elcolombiano.com', 'www.semana.com', 'www.pulzo.com']
 colombia_periodicos += [x.replace('www.', '') for x in colombia_periodicos]
 
 dominicana_periodicos = ["www.listin.com.do","www.elnacional.com.do","www.hoy.com.do",
@@ -81,6 +87,11 @@ dominicana_periodicos = ["www.listin.com.do","www.elnacional.com.do","www.hoy.co
               "www.diariodominicano.com","www.noticiasdominicanas.com",
               "www.lasultimasnoticias.net","www.remolacha.net","www.elperiodico.com.do"]
 dominicana_periodicos += [x.replace('www.', '') for x in dominicana_periodicos] # inglés
+dominicana_news = ['listindiario.com', 'elnacional.com.do', 'hoy.com.do', 'www.diariolibre.com',
+              'www.elcaribe.com.do', 'eldia.com.do', 'elnuevodiario.com.do', 'www.metrord.do',
+              'www.ultimasnoticias.com.do', 'www.acento.com.do', 'almomento.net', 'diariodominicano.com']
+do_news =  set(dominicana_news) - set(dominicana_periodicos)
+dominicana_periodicos = dominicana_periodicos + list(do_news)
 
 mexico_periodicos = ['www.milenio.com', 'www.excelsior.com.mx', 'www.eluniversal.com.mx',
           'www.heraldodemexico.com.mx', 'www.reforma.com',
@@ -102,6 +113,11 @@ nicaragua_periodicos = ['www.laprensa.com.ni', 'www.elnuevodiario.com.ni',
           'www.nicaraguainvestiga.com', 'www.ipnicaragua.com',
           'www.nicaraguaactual.tv']
 nicaragua_periodicos += [x.replace('www.', '') for x in nicaragua_periodicos]
+nicaragua_news = ['www.laprensa.com.ni', 'www.elnuevodiario.com.ni', '100noticias.com.ni',
+             'www.vostv.com.ni', 'www.confidencial.com.ni', 'www.articulo66.com', 'nicaraguainvestiga.com',
+             'nicaraguaactual.tv', 'ipnicaragua.com']
+ni_news =  set(nicaragua_news) - set(nicaragua_periodicos)
+nicaragua_periodicos = nicaragua_periodicos + list(ni_news)
 
 uruguay_periodicos = ['www.elpais.com.uy','www.elobservador.com.uy', 'www.republica.com.uy',
            'ladiaria.com.uy', 'www.montevideo.com.uy','www.lr21.com.uy',
@@ -110,30 +126,55 @@ uruguay_periodicos = ['www.elpais.com.uy','www.elobservador.com.uy', 'www.republ
 uruguay_periodicos += [x.replace('www.', '') for x in uruguay_periodicos]
 
 paraguay_periodicos = ['www.ultimahora.com','www.abc.com.py','www.cronica.com.py',
-            'www.hoy.com.py','www.hoy.com.py','www.paraguay.com']
+            'www.hoy.com.py','www.hoy.com.py','www.paraguay.com',
+            'www.lanacion.com.py', 'www.npy.com.py', 'www.5dias.com.py']
 paraguay_periodicos += [x.replace('www.', '') for x in paraguay_periodicos]
+paraguay_news = ['www.ultimahora.com', 'www.abc.com.py', 'www.cronica.com.py', 'independiente.com.py',
+            'www.hoy.com.py', 'www.5dias.com.py', 'www.paraguay.com', 'www.elpoder.com.py', 'www.elredactor.com.py',
+            'www.lanacion.com.py', 'diariolajornada.com.py']
+py_news =  set(paraguay_news) - set(paraguay_periodicos)
+paraguay_periodicos = paraguay_periodicos + list(py_news)
 
-puerto_rico_periodicos = ['www.elnuevodia.com', 'www.primerahora.com', 'www.elvocero.com', 'www.metro.pr',
-               'www.noticel.com', 'www.periodicolaperla.com', 'www.elexpresso.com']
+puerto_rico_periodicos = ['www.elnuevodia.com', 'www.primerahora.com', 'www.elvocero.com',
+                'www.metro.pr','www.noticel.com', 'www.periodicolaperla.com', 'www.elexpresso.com',
+                'www.telemundopr.com', 'www.primerahora.com']
 puerto_rico_periodicos += [x.replace('www.', '') for x in puerto_rico_periodicos]
 
-belice_periodicos = ['www.sanpedrosun.com', 'www.breakingbelizenews.com']
+belice_periodicos = ['www.sanpedrosun.com', 'www.breakingbelizenews.com', 'belizean.com',
+            'wicnews.com', 'edition.channel5belize.com', 'amandala.com.bz', 'lovefm.com',
+            ]
 belice_periodicos += [x.replace('www.', '') for x in belice_periodicos] # inglés
 
 bolivia_periodicos = ['www.la-razon.com','jornada.com.bo','www.paginasiete.bo',
-           'www.erbol.com.bo','www.laprensa.com.bo']
+           'www.erbol.com.bo','www.laprensa.com.bo', 'www.lostiempos.com',
+           'eldeber.com.bo', 'www.paginasiete.bo', 'www.eldiario.net',
+           'www.noticiasfides.com', 'correodelsur.com']
 bolivia_periodicos += [x.replace('www.', '') for x in bolivia_periodicos]
+bolivia_news = ['www.eldiario.net', 'www.la-razon.com', 'jornada.com.bo', 'www.paginasiete.bo',
+           'www.erbol.com.bo', 'www.noticiasfides.com', 'www.boliviaentusmanos.com', 'www.laprensa.com.bo',
+           'www.oxigeno.bo', 'www.brujuladigital.net', 'eldeber.com.bo', 'www.lostiempos.com']
+bo_news =  set(bolivia_news) - set(bolivia_periodicos)
+bolivia_periodicos = bolivia_news + list(bo_news)
 
 costa_rica_periodicos = ['www.nacion.com','www.diarioextra.com','www.larepublica.net',
-              'www.lateja.cr','www.elmundo.cr','www.elpais.cr','www.crhoy.com']
+              'www.lateja.cr','www.elmundo.cr','www.elpais.cr','www.crhoy.com',
+              'www.teletica.com', 'www.elfinancierocr.com' ]
 costa_rica_periodicos += [x.replace('www.', '') for x in costa_rica_periodicos]
+costarica_periodicos = ['www.nacion.com', 'www.diarioextra.com', 'www.larepublica.net', 'www.lateja.cr',
+             'www.elmundo.cr', 'www.elpais.cr', 'www.crhoy.com', 'elguardian.cr', 'amprensa.com',
+             'ncrnoticias.com', 'elperiodicocr.com', 'delfino.cr']
+cr_news =  set(costarica_periodicos) - set(costa_rica_periodicos)
+costa_rica_periodicos = costa_rica_periodicos + list(cr_news)
 
-barbados_periodicos = ['www.barbadosadvocate.com', 'barbadosadvocate.com'] # inglés
+barbados_periodicos = ['www.barbadosadvocate.com', 'barbadosadvocate.com', 'barbadostoday.bb',
+                'www.nationnews.com'] # inglés
 
-trinidad_y_tobago_periodicos = ['www.trinidadexpress.com', 'www.newsday.co.tt', 'www.guardian.co.tt']
+trinidad_y_tobago_periodicos = ['www.trinidadexpress.com', 'www.newsday.co.tt',
+                'www.guardian.co.tt', 'www.trinidadandtobagonews.com']
 trinidad_y_tobago_periodicos += [x.replace('www.', '') for x in trinidad_y_tobago_periodicos]
 
-jamaica_periodicos = ['www.jamaica-gleaner.com', 'www.jamaica-star.com', 'www.jamaicaobserver.com'] # inglés
+jamaica_periodicos = ['www.jamaica-gleaner.com', 'www.jamaica-star.com',
+            'www.jamaicaobserver.com', 'www.jis.gov.jm', 'www.go-jamaica.com'] # inglés
 jamaica_periodicos += [x.replace('www.', '') for x in jamaica_periodicos]
 
 suriname_periodicos = ['www.dwtonline.com', 'www.dagbladdewest.com'] # Holandes
@@ -141,31 +182,10 @@ suriname_periodicos += [x.replace('www.', '') for x in suriname_periodicos]
 
 guayana_francesa_periodicos = ['www.franceguyane.fr', 'franceguyane.fr'] # frances
 
-
 venezuela_periodicos = ['www.ultimasnoticias.com.ve', 'www.eluniversal.com', 'www.2001.com.ve',
              'www.correodelorinoco.gob.ve', 'www.telesurtv.net', 'ultimasnoticias.com.ve',
              'www.elimpulso.com', 'www.elnacional.com', 'www.el-carabobeno.com', 'www.lapatilla.com',
              'www.elpitazo.net', 'www.noticierodigital.com', 'elestimulo.com']
-
-bolivia_periodicos = ['www.eldiario.net', 'www.la-razon.com', 'jornada.com.bo', 'www.paginasiete.bo',
-           'www.erbol.com.bo', 'www.noticiasfides.com', 'www.boliviaentusmanos.com', 'www.laprensa.com.bo',
-           'www.oxigeno.bo', 'www.brujuladigital.net', 'eldeber.com.bo', 'www.lostiempos.com']
-
-dominicana_periodicos = ['listindiario.com', 'elnacional.com.do', 'hoy.com.do', 'www.diariolibre.com',
-              'www.elcaribe.com.do', 'eldia.com.do', 'elnuevodiario.com.do', 'www.metrord.do',
-              'www.ultimasnoticias.com.do', 'www.acento.com.do', 'almomento.net', 'diariodominicano.com']
-
-paraguay_periodicos = ['www.ultimahora.com', 'www.abc.com.py', 'www.cronica.com.py', 'independiente.com.py',
-            'www.hoy.com.py', 'www.5dias.com.py', 'www.paraguay.com', 'www.elpoder.com.py', 'www.elredactor.com.py',
-            'www.lanacion.com.py', 'diariolajornada.com.py']
-
-nicaragua_periodicos = ['www.laprensa.com.ni', 'www.elnuevodiario.com.ni', '100noticias.com.ni',
-             'www.vostv.com.ni', 'www.confidencial.com.ni', 'www.articulo66.com', 'nicaraguainvestiga.com',
-             'nicaraguaactual.tv', 'ipnicaragua.com']
-
-costarica_periodicos = ['www.nacion.com', 'www.diarioextra.com', 'www.larepublica.net', 'www.lateja.cr',
-             'www.elmundo.cr', 'www.elpais.cr', 'www.crhoy.com', 'elguardian.cr', 'amprensa.com',
-             'ncrnoticias.com', 'elperiodicocr.com', 'delfino.cr']
 
 panama_periodicos = ['www.panamaamerica.com.pa', 'www.critica.com.pa', 'www.prensa.com', 'elsiglo.com.pa',
           'www.laestrella.com.pa', 'www.midiario.com', 'www.diaadia.com.pa', 'www.metrolibre.com',
