@@ -2,6 +2,7 @@ from tqdm import tqdm
 import pandas as pd
 import clean_news
 from get_news import *
+from summarizer_news import summarize_news
 from datetime import date, timedelta, datetime
 from dateutil.relativedelta import relativedelta
 import os
@@ -54,13 +55,12 @@ queries_nl = ['migratie', 'migrant', 'vluchteling']
 
 queires_fr = ['migration', 'migrant','réfugié']
 
-# paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br', 
+# paises = ['ar', 'co', 'mx', 'cl', 'ec', 'pe', 'gt', 'sv', 'hn', 'br',
 #           'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr', 'bo', 'cr', 'do',
 #           'ni', 'uy', 'py', 'gf']
 
-paises = ['uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr', 'bo', 'cr', 'do',
-          'ni', 'uy', 'py', 'gf']
-
+#paises = ['ec', 'co', 'do', 'ni', 'py', 'pr', 'bz', 'bo', 'cr', 'bb', 'tt', 'jm']
+paises =  ['bo']
 
 for pais in paises:
     if pais == 'br':
@@ -85,7 +85,7 @@ for pais in paises:
 news = os.listdir('news')
 
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
-          'refugiada', 'refugiadas', 'migran', 'migración', 'migratoria',
+          'refugiada', 'refugiadas', 'migra', 'migración', 'migratoria',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
           'desplazad',
           'migration', 'migrant', 'refugee',
@@ -99,3 +99,13 @@ for n in news:
     df = df.drop_duplicates()
     df1 = clean_news.get_topics(df, topics)
     df1.to_csv('./news_cln/'+n[:-4]+'_cln.csv', sep='\t', index=False)
+
+import nltk
+nltk.download('punkt')
+
+news_cln = os.listdir('news_cln')
+for n in news_cln:
+    print(n)
+    df_t = pd.read_csv('news_cln/'+n, sep='\t')
+    df_t['summary'] = [summarize_news(url, lenguaje='es', SENTENCES_COUNT=3) for url in df_t['link']]
+    df_t.to_csv('./news_resumen/'+n[:7]+'_resumen.csv', sep='\t', index=False)
