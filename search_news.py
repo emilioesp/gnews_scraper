@@ -59,8 +59,8 @@ queires_fr = ['migration', 'migrant','réfugié']
 #           'uy', 'pr', 'bz', 'bb', 'tt', 'jm', 'sr', 'bo', 'cr', 'do',
 #           'ni', 'uy', 'py', 'gf']
 
-#paises = ['ec', 'co', 'do', 'ni', 'py', 'pr', 'bz', 'bo', 'cr', 'bb', 'tt', 'jm']
-paises =  ['bo']
+paises = [ 'gt', 'hn', 'mx',
+          'ni', 'pa', 'pe', 'pr', 'py', 'uy', 've']
 
 for pais in paises:
     if pais == 'br':
@@ -103,9 +103,9 @@ for n in news:
 import nltk
 nltk.download('punkt')
 
-news_cln = os.listdir('news_cln')
-for n in news_cln:
+
+for n in paises:
     print(n)
-    df_t = pd.read_csv('news_cln/'+n, sep='\t')
+    df_t = pd.read_csv('news_cln/news_'+n+'_cln.csv', sep='\t')
     df_t['summary'] = [summarize_news(url, lenguaje='es', SENTENCES_COUNT=3) for url in df_t['link']]
-    df_t.to_csv('./news_resumen/'+n[:7]+'_resumen.csv', sep='\t', index=False)
+    df_t.to_csv('./news_resumen/news_'+n+'_resumen.csv', sep='\t', index=False)
