@@ -87,18 +87,19 @@ news = os.listdir('news')
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugiada', 'refugiadas', 'migra', 'migración', 'migratoria',
           'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
-          'desplazad',
-          'migration', 'migrant', 'refugee',
+          'desplazad', 'deportaci', 'xenófob'
+          'migration', 'migrant', 'migrants', 'refugee', 'foreigne'
           'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenland'
+          'deport'
           ]
 
 for n in news:
     print(n)
     df = pd.read_csv('news/'+n, sep='\t')
     df = df.dropna()
-    df = df.drop_duplicates()
+    #df = df.drop_duplicates()
     df1 = clean_news.get_topics(df, topics)
-    df1.to_csv('./news_cln/'+n[:-4]+'_cln.csv', sep='\t', index=False)
+    df1.to_csv('./news_cln1/'+n[:-4]+'_cln.csv', sep='\t', index=False)
 
 import nltk
 nltk.download('punkt')
