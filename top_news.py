@@ -7,8 +7,10 @@ from urllib.request import urlopen
 from datetime import date, timedelta, datetime
 import urllib.parse
 from tqdm import tqdm
+import os
 from info import countries_info
 import newsscraper
+import clean_news
 
 
 def create_topic_news(country_code, get_text=False, num=10):
@@ -41,6 +43,15 @@ def create_topic_news(country_code, get_text=False, num=10):
 paises = [ 'ar', 'bo', 'cl', 'co', 'cr', 'do', 'gt', 'hn', 'mx',
           'ni', 'pa', 'pe', 'pr', 'py', 'uy', 've', 'ec']
 
+topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
+          'refugiada', 'refugiadas', 'migra', 'migración', 'migratoria',
+          'refugian', 'migraçao', 'xenofob', 'extranjer', 'ciudadanos',
+          'desplazad', 'deportaci', 'xenófob'
+          'migration', 'migrant', 'migrants', 'refugee', 'foreigne'
+          'migratie', 'migrant', 'vluchteling', 'xenofobie', 'buitenland'
+          'deport'
+          ]
+
 today = date.today().strftime("_%Y_%m_%d")
 
 for j in tqdm(range(len(paises))):
@@ -54,6 +65,20 @@ for j in tqdm(range(len(paises))):
         df = df.drop_duplicates(subset=['link'])
         df = df.drop_duplicates(subset=['title_corrected'])
         df = df.sort_values('date')
+        df = df.dropna()
+        df1 = clean_news.get_topics(df, topics)
+        df['migracion'] = 0
+        df.loc[df1.index,'migracion'] = 1
     except:
         pass
     df.to_csv('./top_news/top_news_' + pais + today + '.csv', sep='\t', index=False)
+
+news = os.listdir('top_news')
+
+for n in news:
+    print(n)
+    try:
+        df = pd.read_csv('top_news/'+n, sep='\t')
+        print('Migration news:',df['migracion'].sum())
+    except:
+        print('No news')
