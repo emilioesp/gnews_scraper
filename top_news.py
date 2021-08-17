@@ -17,7 +17,7 @@ def create_topic_news(country_code, get_text=False, num=10):
     engine_countries = ['ar', 'br', 'cl', 'co', 'mx', 'pe', 've']
     topic = countries_info[country_code.upper()]['topic_id']
     language = countries_info[country_code.upper()]['gl_language_id']
-    if country_code in engine_countries:
+    if country_code.lower() in engine_countries:
         news_url = 'https://news.google.com/rss/topics/' + topic + '?hl={}&gl={}&ceid={}:{}'.format(language, country_code, country_code, language)
     else:
         news_url = 'https://news.google.com/rss/topics/' + topic + '?hl={}&gl=US&ceid=US:{}'.format(language, language)
@@ -40,8 +40,7 @@ def create_topic_news(country_code, get_text=False, num=10):
     return news
 
 
-paises = [ 'ar', 'bo', 'cl', 'co', 'cr', 'do', 'gt', 'hn', 'mx',
-          'ni', 'pa', 'pe', 'pr', 'py', 'uy', 've', 'ec']
+paises = list(countries_info.keys())
 
 topics = ['migracion', 'migrante', 'migrantes', 'refugiados', 'refugiado',
           'refugiada', 'refugiadas', 'migra', 'migración', 'migratoria',
@@ -71,7 +70,7 @@ for j in tqdm(range(len(paises))):
         df.loc[df1.index,'migracion'] = 1
     except:
         pass
-    df.to_csv('./top_news/top_news_' + pais + today + '.csv', sep='\t', index=False)
+    df.to_csv('./top_news/top_news_' + pais.lower() + today + '.csv', sep='\t', index=False)
 
 news = os.listdir('top_news')
 
