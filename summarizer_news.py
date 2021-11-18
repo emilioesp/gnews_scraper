@@ -6,12 +6,12 @@ from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 import trafilatura
 
+
 def summarize_news(url, lenguaje='es', SENTENCES_COUNT=3):
     tokenizer = Tokenizer(lenguaje)
     stemmer = Stemmer(lenguaje)
     summarizer = Summarizer(stemmer)
     summarizer.stop_words = get_stop_words(lenguaje)
-    # parser = HtmlParser.from_url(url, tokenizer)
     downloaded = trafilatura.fetch_url(url)
     text = trafilatura.process_record(downloaded, include_comments=False,
                                       include_tables=False, deduplicate=False,
